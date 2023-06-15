@@ -1,4 +1,12 @@
-# BankProfitClassmadebyLucyToastinne.py
+
+#Calendar modules implementation 2023/06/14
+import math
+import calendar
+from datetime import datetime
+from datetime import date
+import time
+
+
 
 class Bank():
 	def __init__(self):
@@ -67,5 +75,80 @@ class Bank():
 
 	def Format_Number(self, number):
 		return "{:,}".format(number).replace(",", ".")
-
+        
 Bank()
+	
+#Salary Class implementation , 2023/06/14#
+#Salary class and functions , 2023/06/15#
+
+
+#Using the parameters x2 and y2 you should calcule your salary the x2 is used to put your salary while y2 is used to 
+#represent the days you work in a month , but if your job gives you a benefit you will receive a discount just like the other discount i
+#put call INSS#
+
+
+class Salary2 :
+    def __init__(self):
+        pass
+        print()
+        x2 = float(input("Put a decimal value or non decimal value here: "))
+        y2 = float(input("put the number of days you work \n discounting any holidays or days that you dont work: "))
+        print()
+        print()
+        month_salary_2 = x2/30 * y2
+        print()
+        print()
+        benefit_job = float(input("Put the benefit value here:  "))
+        print()
+        if benefit_job == 0:
+              print("The Benefit Discount will be exclueded from the operation ")
+        elif benefit_job <=  0:
+              print()
+              print("Something dont smell good")
+        else:
+              print()
+              print("We will comence the benefit discount ")
+              print()
+              print()
+              
+        inss_discount = float(input("Put the percentage of the INSS \n note: if dont live in Brazil  please put 0 \if not then please continue: "))
+        print()
+        print()
+        if inss_discount ==0:
+              print()
+              print("Then the INSS will be exluded from the operation")
+              print()
+        elif inss_discount > 0:
+              print()
+              print("The INSS was added sucefully to the operation")
+              print()
+        else:
+              print("Something dont smell good here.....")
+        print()
+        print()
+        real_salary = month_salary_2 - inss_discount - benefit_job 
+        print("The real salary is", real_salary)
+        print()
+        
+
+Salary2()
+
+
+
+#Here you register your Payment Day#
+
+class PaymentDay:
+    def __init__(self):
+        pass
+    day = date(2023, 7,21)
+    print("Today is" , day)
+
+#Calendar is also add if you want to see which day you'll receive your salary#
+
+class YearCalendar(PaymentDay):
+    def __init__(self):
+        super().__init__()
+    def __next__():
+        pass
+    year = calendar.month(2023, 6)
+    print(year)
