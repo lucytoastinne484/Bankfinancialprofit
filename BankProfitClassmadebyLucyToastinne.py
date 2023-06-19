@@ -152,3 +152,74 @@ class YearCalendar(PaymentDay):
         pass
     year = calendar.month(2023, 6)
     print(year)
+    
+    
+    
+#Implementation of the VitalCusts class to calculate bills 19/06/2023#
+# Its basically it let you calculate your bills and discount from the profit you gain
+# based in how much 
+
+
+
+class VitalCusts:
+      def __init__ (self):
+            pass
+      eletricity_bill = float(input("Put the eletricity bill value here:  "))
+      while eletricity_bill == 0:
+            float(input("Put the eletricity bill value here:  "))
+      if eletricity_bill > 0:
+            print("The value will be added")
+            
+            
+      print()
+            
+      def __next__(self):
+            pass
+      water_bill =  float(input("Put the value of the water bill here:  "))
+      while water_bill == 0:
+            float(input("Put the value of the water bill here:  "))
+      if water_bill > 0:
+            print("the value will be added")
+      
+      
+      print()
+      
+      
+      def __next__ (self):
+            pass
+      house_tribute = float(input("Put the house tribute of your country:  "))
+      while house_tribute == 0:
+            float(input("Put the house tribute of your country:  "))
+      if house_tribute > 0:
+            print("The value will be added")
+            
+      print()
+            
+      print(eletricity_bill + water_bill + house_tribute)
+      
+      
+
+print()
+
+#Extra bills function implementation that lets you calculate something that you #
+# paid besides the bills like eletricity , water and thehouse tribute but #
+# i have to change some things in the future since this program #
+# update date: 19/06/2023#
+
+def extrabills ():
+    extra =   float(input("Put a number of value that you used: "))
+    extra_2 = float(input("Put another value if you have waste your money on other things: "))
+    if extra_2 ==0:
+          print("The operation of the extra_2 will be canceled ")
+    if extra_2 != 0:
+          print("Okay the value was included")
+    if extra_2 < 0:
+          print("We dont use negative values when pu a value in this case \n please put a positive value")
+    total_extra = extra + extra_2 
+    print(total_extra)
+          
+          
+extrabills()
+    
+
+
