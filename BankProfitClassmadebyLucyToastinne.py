@@ -162,44 +162,46 @@ class YearCalendar(PaymentDay):
 
 
 class VitalCusts:
-      def __init__ (self):
+        def __init__ (self):
             pass
-      eletricity_bill = float(input("Put the eletricity bill value here:  "))
-      while eletricity_bill == 0:
-            float(input("Put the eletricity bill value here:  "))
-      if eletricity_bill > 0:
+eletricity_bill = float(input("Put the eletricity bill value here:  "))
+if eletricity_bill == 0:
+    print("The valor will be dismissed from the operation")
+if eletricity_bill > 0:
             print("The value will be added")
+if eletricity_bill < 0:
+            print("Valor invalido")
+        
             
             
-      print()
-            
-      def __next__(self):
+    
+def __next__(self):
             pass
-      water_bill =  float(input("Put the value of the water bill here:  "))
-      while water_bill == 0:
+water_bill =  float(input("Put the value of the water bill here:  "))
+while water_bill == 0:
             float(input("Put the value of the water bill here:  "))
-      if water_bill > 0:
+if water_bill > 0:
             print("the value will be added")
       
       
-      print()
+print()
       
       
-      def __next__ (self):
+def __next__ (self):
             pass
-      house_tribute = float(input("Put the house tribute of your country:  "))
-      while house_tribute == 0:
+house_tribute = float(input("Put the house tribute of your country:  "))
+while house_tribute == 0:
             float(input("Put the house tribute of your country:  "))
-      if house_tribute > 0:
+if house_tribute > 0:
             print("The value will be added")
             
-      print()
+print()
             
-      print(eletricity_bill + water_bill + house_tribute)
+print(eletricity_bill + water_bill + house_tribute)
       
       
 
-print()
+
 
 #Extra bills function implementation that lets you calculate something that you #
 # paid besides the bills like eletricity , water and thehouse tribute but #
@@ -219,7 +221,26 @@ def extrabills ():
     print(total_extra)
           
           
-extrabills()
+print()
+
+#Implementation of the Poupança function in the BankProfit.py 13/07/2023#
+
+def Poupança():
+      print(datetime.now()) #To register the time of the operation#
+      print("Insert a valor to storage") #Put the wished valor#
+      poupança = float(input()) #Put the valor here#
+      print("Put the Selic percentage")
+      selic_percentage_100 = float(input())#Put the selic percentage here#
+      true_selic_percentage = selic_percentage_100/100 #Conversion of the percentage put#
+      poupança_profit = poupança * selic_percentage_100 #The real valor of the poupança is storage here#
+      print("The result of the operation is")
+      print(poupança_profit) #Result#
+      print("End of the operations")
+      
+      
+Poupança() #Time to test if this is working properly#
+          
+
     
 
 
